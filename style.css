@@ -8,7 +8,8 @@
     background-color: #ffffff;
     color: #121212;
     font-family: 'Helvetica Neue', sans-serif;
-}
+    padding: 60px;
+  }
   
   header {
     display: flex;
@@ -69,42 +70,38 @@
     margin-bottom: 10px;
   }
   
-  .button-cv {
-    text-align: center;
+  .button-section {
+    width: 280px;
     padding: 20px;
-  }
+    display: flex; /* Элементы внутри секции будут в ряд */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+}
+
+/* Общие стили для кнопок */
+.button {
+    padding: 10px 20px; /* Паддинги кнопки (вертикально 10px, горизонтально 20px) */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Закругляем углы кнопки */
+    cursor: pointer; /* Изменяем указатель мыши при наведении */
+    font-size: 16px; /* Размер шрифта кнопки по умолчанию */
+}
+
+/* Стили для кнопки "Contact Me" */
+.contact-button {
+    background-color: #3498db; /* Цвет фона кнопки "Contact Me" */
+    color: #fff; /* Цвет текста кнопки "Contact Me" */
+}
+
+/* Стили для кнопки "Look CV" */
+.cv-button {
+    background-color: #e74c3c; /* Цвет фона кнопки "Look CV" */
+    color: #fff; /* Цвет текста кнопки "Look CV" */
+}
   
-  .button-cv a {
-    display: flex;
-    width: 100px;
-    align-items: center;
-    padding: 20px;
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 18px; /* Измените размер шрифта здесь */
-    border-radius: 5px;
-  }
-  
-  .button-contact {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .button-contact a {
-    display: inline-block;
-    color: #121212;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 18px; /* Измените размер шрифта здесь */
-    border: 2px solid #121212;
-    border-radius: 5px;
-  }
   
   @media (max-width: 600px) {
     .avatar img {
-      width: 100px;
+      width: 80px;
     }
   
     .avatar h1 {
@@ -133,18 +130,15 @@
     .about p {
     width: 300;
     word-break: break-word;
-    font-size: 36px;
+    font-size: 30px;
     margin-bottom: 10px;
     }
-
-    .button-cv a {
-      font-size: 16px; /* Измените размер шрифта здесь */
-      padding: 8px 16px;
-    }
-  
-    .button-contact a {
-      font-size: 16px; /* Измените размер шрифта здесь */
-      padding: 8px 16px;
-    }
+    .button-section {
+      flex-direction: column; /* Элементы в колонку на узких экранах */
   }
-  
+
+  .button {
+      margin-bottom: 10px; /* Расстояние между кнопками на узких экранах */
+      font-size: 14px; /* Уменьшенный размер шрифта на узких экранах */
+  }
+}
